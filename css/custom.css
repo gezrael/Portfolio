@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+html, body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: rgb(226, 239, 240);
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-nav {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #464646;
+    color: #464646;
+}
+
+.navbar-light .navbar-toggler:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+    
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000; 
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #000; 
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.active {
+    background-color: #B1B1B1;
+    border-radius: 10px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.poetry-pic{
+    filter: grayscale(.7);
+}
+
+.marin-pic{
+    filter: grayscale(.6);
+}
+
+.piano-pic {
+    filter: grayscale(.5);
+}
+
+.btn-outline-dark:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+
+footer {
+    flex-shrink: 0;
+}
+
+header {
+    background: no-repeat center center;
+    background-size: cover;
+    color: white;
+	
+}
+
+.color-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 60vh;
+}
+
+.modern-web-design {
+    filter: grayscale(.2);
+}
+
+.myweb-design{
+    font-size: 7vw;
+    letter-spacing: 2px;
+    opacity: 9;
+    color: #ffffff;
+}
+
+.singleCol {
+    max-width: 750px;
+}
+
+.animate__fadeIn{
+    animation: bounceIn 1s ease-in-out;
+}
+  
+.card {
+    animation: bounceIn 1s ease-in-out;
+}
+
+.ggez {
+    filter: saturate(.5);
+}
+
+.ggez img {
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.ggez img:hover {
+    transform: rotate(10deg) scale(1.5);
+}
+
+.btn-primary {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    
+}
+
+footer {
+    background-color: #000000;
+    color: wheat;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: #dfdfdf;
+}
+
+footer a:hover svg {
+    animation: bounce 0.5s;
+}
+
+
+@media (max-width: 768.98px) {
+    .color-overlay {
+        min-height: 30vh;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
